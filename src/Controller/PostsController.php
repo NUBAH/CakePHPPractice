@@ -3,8 +3,15 @@ namespace App\Controller;
 
 class PostsController extends AppController {
 
+    public $paginate = [
+        'limit' => 2,
+        'order' => [
+            'created' => 'desc'
+        ]
+        ];
+
     public function index() {
-        $posts = $this->Posts->find('all');
+        $posts = $this->paginate($this->Posts->find());
 
         $this->set(compact('posts'));
     }

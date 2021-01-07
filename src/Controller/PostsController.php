@@ -7,7 +7,8 @@ class PostsController extends AppController {
         'limit' => 2,
         'order' => [
             'created' => 'desc'
-        ]
+        ],
+        'contain' => 'Users'
         ];
 
     public function index() {
@@ -17,7 +18,9 @@ class PostsController extends AppController {
     }
 
     public function view($id = null) {
-        $post = $this->Posts->get($id);
+        $post = $this->Posts->get($id ,[
+            'contain' => 'Users'
+        ]);
         $this->set(compact('post'));
     }
 }

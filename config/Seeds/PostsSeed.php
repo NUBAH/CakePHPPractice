@@ -26,6 +26,7 @@ class PostsSeed extends AbstractSeed
                 'desctiption' => '最初の投稿の概要',
                 'body' => '最初の投稿の内容',
                 'published' => 1,
+                'user_id' => 1,
                 'created' => '2021-01-06 10:00:00',
                 'modified' => '2021-01-06 10:00:00'
             ],[
@@ -33,6 +34,7 @@ class PostsSeed extends AbstractSeed
                 'desctiption' => '2番目の投稿の概要',
                 'body' => '2番目の投稿の内容',
                 'published' => 1,
+                'user_id' => 2,
                 'created' => '2021-01-06 10:00:00',
                 'modified' => '2021-01-06 10:00:00'
             ]
